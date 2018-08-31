@@ -1,1 +1,5 @@
-# slack_command_helloworld_beer_ruby
+you need a working ruby install
+then clone this git
+then `bundle install`
+
+you need to run it somewhere on the internet (use heroku) ?
