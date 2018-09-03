@@ -7,7 +7,7 @@ get '/' do
 @day = Date.today.strftime("%A")
 @daynum = Date.today.strftime("%w").to_i
 @friday = 5
-
+@user_name = params[:user_name]
 if @day == "Friday"
 @time = Time.now.strftime("%H").to_i
 
@@ -17,6 +17,10 @@ else
 "I know that's you Oana, or Cosmin or Raz or Joel, go forth to the beer fridge!!! :beer:"
 end
 else
-'Hello ' + @user_name + '! The beer Fridge is crap on' + @day + 'Please wait' + (@friday - @daynum) 
+puts @user_name
+puts @day
+puts @friday
+puts @daynum
+'Hello ' + @user_name + '! The beer Fridge is crap on' + @day.to_s + 'Please wait' + (@friday - @daynum).to_s + 'days'
 end
 end
